@@ -1,0 +1,42 @@
+** PySDL2
+https://lukems.github.io/py-sdl2/modules/index.html
+https://lukems.github.io/py-sdl2/tutorial/rl.html
+https://lukems.github.io/py-sdl2/modules/sdl2.html
+https://lukems.github.io/py-sdl2/modules/index.html
+https://lukems.github.io/py-sdl2/tutorial/
+https://pysdl2.readthedocs.io/en/rel_0_9_7/
+https://about-prog.com/en/articles/python/hello_world_sdl2
+https://readthedocs.org/projects/pysdl2/downloads/pdf/latest/
+https://github.com/marcusva/py-sdl2
+https://github.com/LukeMS/pysdl2-roguelike-tutorial
+https://pythonprogramming.net/opengl-rotating-cube-example-pyopengl-tutorial/
+https://pythonprogramming.net/improving-infinite-3d-cubes-pyopengl-tutorial/
+https://metamost.com/opengl-with-python/
+https://github.com/jcteng/python-opengl-tutorial
+http://www.opengl-tutorial.org/beginners-tutorials/tutorial-6-keyboard-and-mouse/
+http://morpheo.inrialpes.fr/~franco/3dgraphics/
+https://pysdl2.readthedocs.io/en/rel_0_9_4/modules/sdl2ext_sprite.html
+https://pysdl2.readthedocs.io/en/rel_0_9_4/modules/index.html
+http://lazyfoo.net/tutorials/SDL/index.php
+https://lazyfoo.net/tutorials/OpenGL/index.php
+
+
+** OpenGL
+
+https://learnopengl.com/In-Practice/2D-Game/Breakout
+https://learnopengl.com/In-Practice/2D-Game/Audio
+
+
+** Rotations
+https://web.archive.org/web/20110204135329/http://inversereality.org/tutorials/graphics%20programming/graphicsprogramming.html
+https://web.archive.org/web/20110204141231/http://inversereality.org/tutorials/graphics%20programming/bitmaprotation.html
+https://www.gamedev.net/forums/topic/666722-rotating-a-sprite-in-sdl2/
+https://stackoverflow.com/questions/1183900/best-way-to-rotate-an-image-using-sdl
+https://lazyfoo.net/tutorials/SDL/15_rotation_and_flipping/index.php
+https://wiki.libsdl.org/SDL_RenderCopyEx
+http://freshmeat.sourceforge.net/projects/sdl_gfx/
+https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glRotate.xml
+http://lazyfoo.net/tutorials/SDL/15_rotation_and_flipping/index.php
+https://wiki.libsdl.org/SDL_RendererFlip
+https://discourse.libsdl.org/t/rotation-angle-for-sdl-rendercopyex/26840
+https://wiki.libsdl.org/SDL_RendererFlip
