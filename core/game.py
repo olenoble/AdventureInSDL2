@@ -8,6 +8,7 @@ from .keyboard import Keyboard
 
 from core.level import Level
 from core.player import Player
+from core.background import BackGround
 
 
 class Game:
@@ -31,6 +32,7 @@ class Game:
 
         self.level = Level('wall', self.GRID_SIZE)
         self.player = Player(self, 'player', 140, 65)
+        self.background = BackGround('bg', self.GRID_SIZE, self.height, self.width)
 
     def get_assets(self):
         self.assets_manager.load_images(self.ASSETS, renderer=self.display.renderer)
@@ -40,9 +42,7 @@ class Game:
         self.draw()
 
     def draw(self):
-        for bg_x in range(int(self.width / self.GRID_SIZE)):
-            for bg_y in range(int(self.height / self.GRID_SIZE)):
-                self.display.draw('bg', bg_x * self.GRID_SIZE, bg_y * self.GRID_SIZE)
+        self.draw_asset(self.background)
         self.draw_asset(self.level)
         self.draw_asset(self.player)
 
@@ -65,7 +65,6 @@ class Game:
                 self.keyboard.set_key_down(event.key.keysym.sym, False)
 
             self.update(delta_time)
-
             SDL_RenderPresent(self.display.renderer)
 
         self.destroy()

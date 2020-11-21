@@ -14,7 +14,4 @@ class Keyboard:
         self._is_key_down[key_code] = is_down
 
     def is_key_down(self, key_code):
-        try:
-            return self._is_key_down[key_code]
-        except KeyError:
-            return False
+        return self._is_key_down.get(key_code, False)
