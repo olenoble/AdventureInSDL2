@@ -5,8 +5,10 @@ from sdl2 import sdlimage
 
 
 class AssetsManager:
-    def __init__(self):
-        self._images = {}
+    def __init__(self, get_data=False, images=None, renderer=None):
+        self._images = images if images else {}
+        if get_data:
+            self.load_images(self._images, renderer=renderer)
 
     def load_image(self, name, src, renderer):
         self._images[name] = sdlimage.IMG_LoadTexture(renderer, str.encode(src))
