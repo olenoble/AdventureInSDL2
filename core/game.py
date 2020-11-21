@@ -18,6 +18,8 @@ class Game:
               'wall': './assets/wall.png'
               }
 
+    display_refs = ['background', 'level', 'player']
+
     def __init__(self, title, width, height, scale):
         SDL_Init(SDL_INIT_VIDEO)
 

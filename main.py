@@ -1,5 +1,4 @@
-# TODO: 1. clean code - everything must be encapsulated
-#       2. More abstraction
+# TODO: 2. More abstraction
 #           a. drawing logic should not be in game / player
 #           b. physics logic must be out of player
 #           c. player object is unrelated to collider
