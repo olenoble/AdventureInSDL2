@@ -1,3 +1,4 @@
 
-pyinstaller -w --onefile main.py
+rem pyinstaller -w --onefile main.py
+python setup.py
 pause

@@ -44,9 +44,8 @@ class Game:
         self.draw()
 
     def draw(self):
-        self.draw_asset(self.background)
-        self.draw_asset(self.level)
-        self.draw_asset(self.player)
+        for obj in self.display_refs:
+            self.draw_asset(getattr(self, obj))
 
     def run(self):
         event = SDL_Event()
