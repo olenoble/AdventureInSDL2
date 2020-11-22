@@ -6,5 +6,5 @@
 from core.game import Game
 
 if __name__ == '__main__':
-    game = Game('Game', 320, 240, 2)
+    game = Game('Game', 320, 240, 3)
     game.run()

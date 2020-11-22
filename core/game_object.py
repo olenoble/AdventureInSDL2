@@ -19,3 +19,6 @@ class GameObject:
 
     def draw(self, display):
         display.draw(self.image, self.x + self.offset_x, self.y + self.offset_y)
+
+    def draw_sprite(self, display):
+        display.draw_sprite(self.image, self.x + self.offset_x, self.y + self.offset_y)

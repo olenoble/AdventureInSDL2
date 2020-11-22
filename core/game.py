@@ -18,7 +18,9 @@ class Game:
     GRID_SIZE = 16
     ASSETS = {'bg': './assets/background.png',
               # 'player': './assets/player.png',
-              'player': './assets/vegeta2.png',
+              # 'player': './assets/vegeta1.png',
+              # 'player': './assets/vegeta_jus.png',
+              'player': './assets/vegeta_new.png',
               'wall': './assets/wall.png'
               }
 
@@ -37,7 +39,8 @@ class Game:
         self.get_assets()
 
         self.level = Level('wall', self.GRID_SIZE)
-        self.player = Player(self, 'player', 140, 65)
+        # self.player = Player(self, 'player', 140, 65)
+        self.player = Player(self, 'player', 160, 120)
         self.background = BackGround('bg', self.GRID_SIZE, self.height, self.width)
 
         self.current_time = 0
@@ -61,8 +64,6 @@ class Game:
         self.draw()
 
     def run(self):
-        # x = SDL_AddEventWatch
-        # y = SDL_SetEventFilter
         event = SDL_Event()
         self.current_time = self.init_time()
         running = True

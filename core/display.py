@@ -16,6 +16,10 @@ class Display:
     def draw(self, image, x, y):
         SDL_RenderCopy(self.renderer, self.asset_manager.get_image(image), None, SDL_Rect(int(x), int(y), 16, 16))
 
+    def draw_sprite(self, image, x, y):
+        SDL_RenderCopy(self.renderer, self.asset_manager.get_image(image),
+                       SDL_Rect(0, 0, 34, 95), SDL_Rect(int(x), int(y), 16, 16))
+
     def destroy(self):
         SDL_DestroyRenderer(self.renderer)
         SDL_DestroyWindow(self.window)
