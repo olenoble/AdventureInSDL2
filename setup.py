@@ -8,7 +8,8 @@ import shutil
 if __name__ == '__main__':
     game_name = 'scandyum'
     folders_to_copy = ['assets']
-    file_to_compile = 'main'
+    # file_to_compile = 'main'
+    file_to_compile = 'scandyum'
 
     # compile_options = ['-w', '--onefile', '--icon=scandyum.ico']
     compile_options = ['-w', '--onedir', '--icon=scandyum.ico']
