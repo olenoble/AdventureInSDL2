@@ -16,6 +16,10 @@ class AssetsManager:
         # SDL_SetColorKey(surf, SDL_TRUE, SDL_MapRGB(surf.contents.format, 255, 255, 255))
         SDL_SetColorKey(surf, SDL_TRUE, SDL_MapRGB(surf.contents.format, 170, 170, 170))
         texture = SDL_CreateTextureFromSurface(renderer, surf)
+
+        # then remove surface
+        SDL_FreeSurface(surf)
+
         self._images[name] = texture
 
     def load_images(self, images, renderer=None):

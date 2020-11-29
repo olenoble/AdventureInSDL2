@@ -1,8 +1,12 @@
+from sdl2 import *
 from core.game_object import GameObject
 from core.keyboard import Keyboard
 
 
 class Player(GameObject):
+    char_type = 0
+    flip = SDL_FLIP_NONE
+
     def __init__(self, game, image, x=0, y=0):
         super().__init__(game, image, x, y)
         self.vel = 200
@@ -20,8 +24,15 @@ class Player(GameObject):
             is_jumping = True
         if self.keyboard.is_key_down(Keyboard.LEFT):
             input_hor -= 1
+            self.char_type = (self.char_type + 1) % 8
+            self.flip = SDL_FLIP_HORIZONTAL
         if self.keyboard.is_key_down(Keyboard.RIGHT):
             input_hor += 1
+            self.char_type = (self.char_type + 1) % 8
+            self.flip = SDL_FLIP_NONE
+        if not (self.keyboard.is_key_down(Keyboard.LEFT) or self.keyboard.is_key_down(Keyboard.RIGHT)):
+            self.char_type = 3
+                
 
         self.vel_x = input_hor * self.vel
         self.vel_y += self.gravity * delta_time
@@ -60,7 +71,7 @@ class Player(GameObject):
         self.collider.x, self.collider.y = self.x, self.y
 
     def draw(self, display):
-        super().draw_sprite(display)
+        super().draw_sprite(display, self.char_type, self.flip)
         if self.x - self.width / 2 < 0:
             self.offset_draw(display, offset_x=self.game.width)
         elif self.x + self.width / 2 > self.game.width:
@@ -71,4 +82,7 @@ class Player(GameObject):
             self.offset_draw(display, offset_y=-self.game.height)
     
     def offset_draw(self, display, offset_x=0, offset_y=0):
-        display.draw_sprite(self.image, self.x + self.offset_x + offset_x, self.y + self.offset_y + offset_y)
+        display.draw_sprite(self.image,
+                            self.x + self.offset_x + offset_x, 
+                            self.y + self.offset_y + offset_y,
+                            self.char_type, self.flip)

@@ -7,4 +7,8 @@ from core.game import Game
 
 if __name__ == '__main__':
     game = Game('Game', 320, 240, 3)
-    game.run()
+    t, i = game.run()
+
+    print('Average FPS = %.3f' % (i / t))
+
+    print('Done')

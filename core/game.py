@@ -17,10 +17,11 @@ from core.background import BackGround
 class Game:
     GRID_SIZE = 16
     ASSETS = {'bg': './assets/background.png',
-              # 'player': './assets/player.png',
-              # 'player': './assets/vegeta1.png',
-              # 'player': './assets/vegeta_jus.png',
-              'player': './assets/vegeta_new.png',
+            #   'player': './assets/player.png',
+            #   'player': './assets/vegeta1.png',
+            #   'player': './assets/vegeta_jus.png',
+            #   'player': './assets/vegeta_new.png',
+              'player': './assets/shortplayer_run.png',              
               'wall': './assets/wall.png'
               }
 
@@ -39,7 +40,6 @@ class Game:
         self.get_assets()
 
         self.level = Level('wall', self.GRID_SIZE)
-        # self.player = Player(self, 'player', 140, 65)
         self.player = Player(self, 'player', 160, 120)
         self.background = BackGround('bg', self.GRID_SIZE, self.height, self.width)
 
@@ -58,6 +58,13 @@ class Game:
         delta_time = time_now - self.current_time
         self.current_time = time_now
         return delta_time
+    
+    def waittime(self, ms):
+        time_now = time.time()
+        time_then = time.time()
+        while ((time_then - time_now)  * 1000) < ms:
+            time_then = time.time()
+        return None
 
     def update(self, delta_time):
         self.player.update(delta_time)
@@ -67,6 +74,9 @@ class Game:
         event = SDL_Event()
         self.current_time = self.init_time()
         running = True
+
+        start_time = time.time()
+        iterations = 0
 
         while running:
             delta_time = self.timing()
@@ -81,8 +91,12 @@ class Game:
 
             self.update(delta_time)
             SDL_RenderPresent(self.display.renderer)
+            iterations += 1
+            # self.waittime(1)
 
+        end_time = time.time()
         self.destroy()
+        return end_time - start_time, iterations
 
     def draw(self):
         for obj in self.display_refs:
