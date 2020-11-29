@@ -41,3 +41,10 @@ http://lazyfoo.net/tutorials/SDL/15_rotation_and_flipping/index.php
 https://wiki.libsdl.org/SDL_RendererFlip
 https://discourse.libsdl.org/t/rotation-angle-for-sdl-rendercopyex/26840
 https://wiki.libsdl.org/SDL_RendererFlip
+
+** fun
+http://wiki.stunts.hu/index.php/Kevin_Pickell
+https://gamedev.stackexchange.com/questions/49626/best-technique-to-create-oldschool-fake-3d-racing-game
+http://www.extentofthejam.com/pseudo/
+https://www.youtube.com/watch?v=KkMZI5Jbf18
+
