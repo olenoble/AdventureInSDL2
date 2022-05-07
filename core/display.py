@@ -23,8 +23,11 @@ class Display:
     def draw_sprite(self, image, x, y, pos, flip):
         # SDL_RenderCopy(self.renderer, self.asset_manager.get_image(image),
         #                SDL_Rect(int(pos * 32), 0, 32, 32), SDL_Rect(int(x), int(y), 16, 16))
+        # SDL_RenderCopyEx(self.renderer, self.asset_manager.get_image(image), 
+        #                  SDL_Rect(int(pos * 32), 0, 32, 32), SDL_Rect(int(x), int(y), 16, 16), 0, None, flip)
         SDL_RenderCopyEx(self.renderer, self.asset_manager.get_image(image), 
-                         SDL_Rect(int(pos * 32), 0, 32, 32), SDL_Rect(int(x), int(y), 16, 16), 0, None, flip)                       
+                         SDL_Rect(int(pos * 64), 0, 64, 64), SDL_Rect(int(x), int(y), 32, 32), 0, None, flip)
+
 
     def destroy(self):
         SDL_DestroyRenderer(self.renderer)

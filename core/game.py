@@ -21,7 +21,8 @@ class Game:
             #   'player': './assets/vegeta1.png',
             #   'player': './assets/vegeta_jus.png',
             #   'player': './assets/vegeta_new.png',
-              'player': './assets/shortplayer_run.png',              
+            #   'player': './assets/shortplayer_run.png',
+              'player': './assets/Tsukikage_test2.png',
               'wall': './assets/wall.png'
               }
 
@@ -92,7 +93,7 @@ class Game:
             self.update(delta_time)
             SDL_RenderPresent(self.display.renderer)
             iterations += 1
-            # self.waittime(1)
+            # self.waittime(20)
 
         end_time = time.time()
         self.destroy()

@@ -32,7 +32,6 @@ class Player(GameObject):
             self.flip = SDL_FLIP_NONE
         if not (self.keyboard.is_key_down(Keyboard.LEFT) or self.keyboard.is_key_down(Keyboard.RIGHT)):
             self.char_type = 3
-                
 
         self.vel_x = input_hor * self.vel
         self.vel_y += self.gravity * delta_time
