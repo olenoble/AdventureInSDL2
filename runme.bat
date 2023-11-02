@@ -1,0 +1,2 @@
+python scandyum.py
+pause
